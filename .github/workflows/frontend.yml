@@ -40,8 +40,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          push: false
-          tags: user/app:latest
+          push: true
+          file: ./dockerfile.v1
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/lab:ghfront1
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       # Skrypt: "Move cache" – cykliczne aktualizowanie cache'a 
