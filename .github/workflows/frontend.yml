@@ -20,8 +20,7 @@ jobs:
       # Akcja: "docker/setup-qemu-action" - "instalacja" emelatora dla wielu architektur
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
-      # Akcja: "cache" - umożliwia manipulowanie cache pomiędzy uruchomieniami kolejnymi 
-      # sesjami GitHub Actions
+      # Akcja: "cache" - umożliwia manipulowanie cache pomiędzy uruchomieniami kolejnymi sesjami GitHub Actions
       - name: Cache Docker layers
         uses: actions/cache@v2
         with:
