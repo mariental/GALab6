@@ -20,7 +20,8 @@ jobs:
       # Akcja: "docker/setup-qemu-action" - "instalacja" emelatora dla wielu architektur
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
-      # Akcja: "cache" - umożliwia manipulowanie cache pomiędzy uruchomieniami kolejnymi sesjami GitHub Actions
+      # Akcja: "cache" - umożliwia manipulowanie cache pomiędzy uruchomieniami kolejnymi 
+      # sesjami GitHub Actions
       - name: Cache Docker layers
         uses: actions/cache@v2
         with:
@@ -44,7 +45,7 @@ jobs:
           tags: user/app:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
-      # Skrypt: "Move cache" – cykliczne aktualizowanie cache'a
+      # Skrypt: "Move cache" – cykliczne aktualizowanie cache'a 
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
